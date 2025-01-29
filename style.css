@@ -10,22 +10,29 @@
 
 html {
     /* anything different from visible */
+    /* to make body resizable */
     overflow: auto;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
+    /* width: 100vw; */
     
     /* needed to remove gap at top*/
     padding: 1px;
-    
+
     resize: both;
-    overflow: auto;
+    overflow: scroll;
     
     * {
         resize: both;
-        overflow: auto;
+        overflow: scroll;
         margin: 10px;
     }
 }
+
+/* #container { */
+    /* display: grid; */
+    /* grid-template: repeat(auto-fill, 200px) / repeat(auto-fill, 200px); */
+    /* grid-template: repeat(auto-fit, minmax(200px,1fr)) / repeat(auto-fit, minmax(200px,1fr)); */
+/* } */
