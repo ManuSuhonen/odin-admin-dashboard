@@ -95,15 +95,6 @@ main {
     grid-row: 2 / 3;
 
     display: grid;
-    /* 
-    grid-template:
-        "one    two     top" 1fr
-        "one    two     top" 1fr
-        "three  four    top" 1fr
-        "three  four    bottom" 1fr
-        "five   six     bottom" 1fr
-        "five   six     bottom" 1fr / 1fr 1fr 1fr; 
-    */
 
     grid-template-rows: 0.2fr repeat(6, 1fr);
     grid-template-columns: repeat(3, 1fr);
