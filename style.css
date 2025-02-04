@@ -24,8 +24,10 @@ body {
     display: grid;
 
     /* grid-template-columns: 17fr 83fr; */
-    grid-template-columns: minmax(max-content, 17fr) 83fr;
-    grid-template-rows: 15% 85%;
+    /* grid-template-columns: minmax(max-content, 17fr) 83fr; */
+    grid-template-columns: max-content 83fr;
+    /* grid-template-rows: 15% 85%; */
+    grid-template-rows: auto 1fr;
 
     * {
         padding: 5px;
@@ -36,8 +38,72 @@ body {
 header {
     z-index: 2;
     grid-column: 2/3;
+    /* grid-template-columns: auto; */
     background-color: rgb(255, 255, 255);
     filter: drop-shadow(0px -10px 10px black);
+
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+
+    #header-top {
+        height: 40px;
+        /* resize: both; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        textarea {
+            height: 100%;
+            width: 70%;
+            min-width: 100px;
+            resize: none;
+            border-radius: 20px;
+            background-color: rgb(211, 211, 211);
+            border-color: white;
+        }
+
+        img {
+            height: 50px;
+            min-width: 50px;
+        }
+
+        svg {
+            min-width: 50px
+        }
+    }
+
+    #header-bottom {
+        display: flex;
+
+        img {
+            height: 70px;
+            min-width: 70px;
+        }
+
+        #button-container {
+            align-content: center;
+            min-width: fit-content;
+
+            button {
+                border-radius: 28px;
+                border-color: #3498db;
+                font-family: Arial;
+                color: #ffffff;
+                font-size: 20px;
+                background: #3498db;
+                padding: 10px 20px 10px 20px;
+                text-decoration: none;
+                inset: unset;
+
+                border:0 none;
+            }
+
+            button:hover {
+                background: #3cb0fd;
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 aside {
