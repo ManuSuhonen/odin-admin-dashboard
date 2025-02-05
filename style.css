@@ -8,6 +8,16 @@
     padding: 0;
 }
 
+.icon {
+    mask-repeat: no-repeat;
+    -webkit-mask-position-x: center;
+    -webkit-mask-position-y: center;
+    background-color: white;
+    aspect-ratio: 1 /1;
+    height: 100%;
+
+}
+
 body {
     height: 100vh;
     width: 100vw;
@@ -118,8 +128,8 @@ aside {
     grid-template-rows: repeat(12, 60px);
 
 
-    resize: both;
-    overflow: auto;
+    /* resize: both; */
+    /* overflow: auto; */
 
 
     .dash-buttons {
@@ -157,6 +167,15 @@ main {
 
     #projects {
         grid-row: 1/3;
+        .card {
+            /* div {
+                background-color: red;
+                min-width: 100px;
+                min-height: 100px;
+                -webkit-mask: url(assets/view-dashboard.svg) no-repeat center;
+                mask: url(assets/view-dashboard.svg) no-repeat center;
+            } */
+        }
     }
 
     #announcements {
