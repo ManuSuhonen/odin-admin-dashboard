@@ -15,21 +15,20 @@
     background-color: white;
     aspect-ratio: 1 /1;
     height: 100%;
-
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
+    /* width: 100vw; */
 
 
-    resize: none;
-    overflow: hidden;
+    /* resize: none; */
+    /* overflow: hidden; */
 }
 
 #parent {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
 
     display: grid;
 
@@ -46,17 +45,22 @@ body {
 }
 
 header {
+
+    .icon {
+        background-color: black;
+    }
+
     z-index: 2;
     grid-column: 2/3;
     /* grid-template-columns: auto; */
     background-color: rgb(255, 255, 255);
-    filter: drop-shadow(0px -10px 10px black);
+    box-shadow: 0 0 10px 0px black;
 
     display: grid;
     grid-template-rows: 2fr 3fr;
 
     #header-top {
-        height: 40px;
+        /* height: 40px; */
         /* resize: both; */
         display: flex;
         align-items: center;
@@ -67,7 +71,7 @@ header {
             width: 70%;
             min-width: 100px;
             resize: none;
-            border-radius: 20px;
+            border-radius: 40px;
             background-color: rgb(211, 211, 211);
             border-color: white;
         }
@@ -122,7 +126,7 @@ aside {
     grid-column: 1/2;
     grid-row: 1/3;
     background-color: rgb(25 146 212);
-    filter: drop-shadow(0 0 0.2rem black);
+    box-shadow: 0 0 10px 0px black;
 
     display: grid;
     grid-template-rows: repeat(12, 60px);
@@ -151,13 +155,19 @@ main {
 
     display: grid;
     grid-template-columns: 3fr 1fr;
+    
+/* 
+    .icon {
+        background-color: black;
+    } 
+*/
 
     .card {
         padding: 30px !important;
         flex: 1 1 auto;
         background-color: white;
         border-radius: 10px;
-        box-shadow: 0 0 0.2rem black;
+
         br {
             content: "";
             display: block;
@@ -167,15 +177,6 @@ main {
 
     #projects {
         grid-row: 1/3;
-        .card {
-            /* div {
-                background-color: red;
-                min-width: 100px;
-                min-height: 100px;
-                -webkit-mask: url(assets/view-dashboard.svg) no-repeat center;
-                mask: url(assets/view-dashboard.svg) no-repeat center;
-            } */
-        }
     }
 
     #announcements {
@@ -190,6 +191,9 @@ main {
             display: grid;
             grid-template-rows: repeat(4, 1fr);
             > div {
+                img {
+                    height: 7rem;
+                }
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
@@ -197,8 +201,4 @@ main {
         }
     }
     
-}
-
-svg {
-    height: 100%;
 }
